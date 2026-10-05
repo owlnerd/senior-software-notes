@@ -57,12 +57,12 @@ Module 3 covers this properly: time budgets per step, and what senior-level answ
 
 3. [The 7-step delivery framework, applied end to end](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%202%20-%20The%20System%20Design%20Method/module-03-seven-step-delivery-framework.md)
 4. [Requirements gathering & the non-functional questions that signal seniority](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%202%20-%20The%20System%20Design%20Method/module-04-requirements-gathering-nfrs.md)
-5. [Back-of-envelope estimation — the latency numbers you need cold (disk seek, memory read, cross-region round trip, and how to use them under pressure)](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%202%20-%20The%20System%20Design%20Method/module-05-back-of-envelope-estimation.md)
+5. [Back-of-envelope estimation](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%202%20-%20The%20System%20Design%20Method/module-05-back-of-envelope-estimation.md) — the latency numbers you need cold (disk seek, memory read, cross-region round trip, and how to use them under pressure)
 
 ### Phase 3 — Distributed Systems Theory
 
 6. [Scalability fundamentals](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%203%20-%20Distributed%20Systems%20Theory/module-06-scalability-fundamentals.md) — horizontal vs. vertical scaling, statelessness, load balancing strategies
-7. [CAP theorem, PACELC, and consistency models (strong / eventual / causal)](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%203%20-%20Distributed%20Systems%20Theory/module-07-cap-pacelc-consistency-models.md)
+7. [CAP theorem, PACELC, and consistency models](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%203%20-%20Distributed%20Systems%20Theory/module-07-cap-pacelc-consistency-models.md) (strong / eventual / causal)
 8. [Replication & partitioning](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%203%20-%20Distributed%20Systems%20Theory/module-08-replication-partitioning.md) — leader-follower, multi-leader, quorum reads/writes, sharding, consistent hashing
 9. [Consensus & coordination](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%203%20-%20Distributed%20Systems%20Theory/module-09-consensus-coordination.md) — Raft, Paxos, ZooKeeper/etcd, distributed locks, vector clocks, CRDTs
 10. [Caching strategy](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%203%20-%20Distributed%20Systems%20Theory/module-10-caching-strategy.md) — cache-aside, write-through/write-back, CDNs, invalidation, Redis patterns
@@ -72,12 +72,12 @@ Module 3 covers this properly: time budgets per step, and what senior-level answ
 
 ### Phase 4 — .NET & C# Technical Mastery
 
-14. CLR & memory internals — stack vs. heap, generational GC, Server vs. Workstation GC, value vs. reference types, boxing
-15. Async/await & concurrency — `Task` internals, `SynchronizationContext`, ThreadPool starvation, Channels, `async void` and deadlock traps
-16. Modern C# — C# 14 field-backed properties & extension members, records, pattern matching, primary constructors, and what fluency here signals to an interviewer
-17. Performance engineering — `Span<T>`/`Memory<T>`, BenchmarkDotNet methodology, Native AOT, JIT tiered compilation, allocation-conscious design
-18. ASP.NET Core internals — middleware pipeline, DI container & lifetime pitfalls (singleton/scoped/transient), minimal APIs vs. controllers
-19. EF Core deep dive — change tracking, query translation, the N+1 problem, compiled queries, migration strategy at scale
+14. [CLR & memory internals](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%204%20-%20.NET%20%26%20C%23%20Technical%20Mastery/module-14-clr-memory-internals.md) — stack vs. heap, generational GC, Server vs. Workstation GC, value vs. reference types, boxing
+15. [Async/await & concurrency](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%204%20-%20.NET%20%26%20C%23%20Technical%20Mastery/module-15-async-await-concurrency.md) — `Task` internals, `SynchronizationContext`, ThreadPool starvation, Channels, `async void` and deadlock traps
+16. [Modern C#](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%204%20-%20.NET%20%26%20C%23%20Technical%20Mastery/module-16-modern-csharp.md) — C# 14 field-backed properties & extension members, records, pattern matching, primary constructors, and what fluency here signals to an interviewer
+17. [Performance engineering](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%204%20-%20.NET%20%26%20C%23%20Technical%20Mastery/module-17-performance-engineering.md) — `Span<T>`/`Memory<T>`, BenchmarkDotNet methodology, Native AOT, JIT tiered compilation, allocation-conscious design
+18. [ASP.NET Core internals](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%204%20-%20.NET%20%26%20C%23%20Technical%20Mastery/module-18-aspnet-core-internals.md) — middleware pipeline, DI container & lifetime pitfalls (singleton/scoped/transient), minimal APIs vs. controllers
+19. [EF Core deep dive](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%204%20-%20.NET%20%26%20C%23%20Technical%20Mastery/module-19-ef-core-deep-dive.md) — change tracking, query translation, the N+1 problem, compiled queries, migration strategy at scale
 
 ### Phase 5 — .NET Architecture Patterns
 
