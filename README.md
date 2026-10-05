@@ -61,14 +61,14 @@ Module 3 covers this properly: time budgets per step, and what senior-level answ
 
 ### Phase 3 — Distributed Systems Theory
 
-6. Scalability fundamentals — horizontal vs. vertical scaling, statelessness, load balancing strategies
-7. CAP theorem, PACELC, and consistency models (strong / eventual / causal)
-8. Replication & partitioning — leader-follower, multi-leader, quorum reads/writes, sharding, consistent hashing
-9. Consensus & coordination — Raft, Paxos, ZooKeeper/etcd, distributed locks, vector clocks, CRDTs
-10. Caching strategy — cache-aside, write-through/write-back, CDNs, invalidation, Redis patterns
-11. Messaging & event-driven systems — queues vs. streams, delivery guarantees, dead-letter queues, the outbox pattern
-12. Data storage deep dive — SQL vs. NoSQL trade-offs, indexing, ACID, distributed transactions (2PC vs. Saga)
-13. Reliability patterns — circuit breakers, retries/backoff, bulkheads, active-active vs. active-passive redundancy
+6. [Scalability fundamentals](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%203%20-%20Distributed%20Systems%20Theory/module-06-scalability-fundamentals.md) — horizontal vs. vertical scaling, statelessness, load balancing strategies
+7. [CAP theorem, PACELC, and consistency models (strong / eventual / causal)](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%203%20-%20Distributed%20Systems%20Theory/module-07-cap-pacelc-consistency-models.md)
+8. [Replication & partitioning](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%203%20-%20Distributed%20Systems%20Theory/module-08-replication-partitioning.md) — leader-follower, multi-leader, quorum reads/writes, sharding, consistent hashing
+9. [Consensus & coordination](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%203%20-%20Distributed%20Systems%20Theory/module-09-consensus-coordination.md) — Raft, Paxos, ZooKeeper/etcd, distributed locks, vector clocks, CRDTs
+10. [Caching strategy](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%203%20-%20Distributed%20Systems%20Theory/module-10-caching-strategy.md) — cache-aside, write-through/write-back, CDNs, invalidation, Redis patterns
+11. [Messaging & event-driven systems](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%203%20-%20Distributed%20Systems%20Theory/module-11-messaging-event-driven-systems.md) — queues vs. streams, delivery guarantees, dead-letter queues, the outbox pattern
+12. [Data storage deep dive](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%203%20-%20Distributed%20Systems%20Theory/module-12-data-storage-deep-dive.md) — SQL vs. NoSQL trade-offs, indexing, ACID, distributed transactions (2PC vs. Saga)
+13. [Reliability patterns](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%203%20-%20Distributed%20Systems%20Theory/module-13-reliability-patterns.md) — circuit breakers, retries/backoff, bulkheads, active-active vs. active-passive redundancy
 
 ### Phase 4 — .NET & C# Technical Mastery
 
