@@ -81,19 +81,19 @@ Module 3 covers this properly: time budgets per step, and what senior-level answ
 
 ### Phase 5 — .NET Architecture Patterns
 
-20. Clean Architecture & layering — what it buys you, where teams misuse it
-21. Modular monolith vs. microservices — the actual decision criteria, not dogma
-22. DDD tactical & strategic patterns — bounded contexts, aggregates, domain events
-23. CQRS & MediatR — when the complexity tax is worth paying
-24. Event sourcing — what it solves, what it costs
-25. Resilience in .NET — Polly: retry, circuit breaker, timeout, rate limiter, hedging
+20. [Clean Architecture & layering](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%205%20-%20.NET%20Architecture%20Patterns/module-20-clean-architecture-layering.md) — what it buys you, where teams misuse it
+21. [Modular monolith vs. microservices](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%205%20-%20.NET%20Architecture%20Patterns/module-21-modular-monolith-vs-microservices.md) — the actual decision criteria, not dogma
+22. [DDD tactical & strategic patterns](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%205%20-%20.NET%20Architecture%20Patterns/module-22-ddd-tactical-strategic-patterns.md) — bounded contexts, aggregates, domain events
+23. [CQRS & MediatR](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%205%20-%20.NET%20Architecture%20Patterns/module-23-cqrs-mediatr.md) — when the complexity tax is worth paying
+24. [Event sourcing](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%205%20-%20.NET%20Architecture%20Patterns/module-24-event-sourcing.md) — what it solves, what it costs
+25. [Resilience in .NET](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%205%20-%20.NET%20Architecture%20Patterns/module-25-resilience-dotnet-polly.md) — Polly: retry, circuit breaker, timeout, rate limiter, hedging
 
 ### Phase 6 — Cloud & Platform Architecture
 
-26. Compute choices — App Service vs. AKS vs. Azure Functions/Container Apps, and when each wins
+26. [Compute choices](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%206%20-%20Cloud%20%26%20Platform%20Architecture/module-26-compute-choices.md) — App Service vs. AKS vs. Azure Functions/Container Apps, and when each wins
 27. Messaging & data platform — Service Bus, Event Grid/Event Hubs, Cosmos DB (partitioning & consistency levels)
-28. Observability — OpenTelemetry, distributed tracing, SLO/SLI/error budgets, structured logging
-29. Security architecture — OAuth2/OIDC, Microsoft Entra ID, Key Vault, threat modeling (STRIDE)
+28. Observability]() — OpenTelemetry, distributed tracing, SLO/SLI/error budgets, structured logging
+29. Security architecture]() — OAuth2/OIDC, Microsoft Entra ID, Key Vault, threat modeling (STRIDE)
 
 ### Phase 7 — The Architect-Specific Track
 
