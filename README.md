@@ -55,9 +55,9 @@ Module 3 covers this properly: time budgets per step, and what senior-level answ
 
 ### Phase 2 — The System Design Method
 
-3. The 7-step delivery framework, applied end to end
-4. Requirements gathering & the non-functional questions that signal seniority
-5. Back-of-envelope estimation — the latency numbers you need cold (disk seek, memory read, cross-region round trip, and how to use them under pressure)
+3. [The 7-step delivery framework, applied end to end](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%202%20-%20The%20System%20Design%20Method/module-03-seven-step-delivery-framework.md)
+4. [Requirements gathering & the non-functional questions that signal seniority](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%202%20-%20The%20System%20Design%20Method/module-04-requirements-gathering-nfrs.md)
+5. [Back-of-envelope estimation — the latency numbers you need cold (disk seek, memory read, cross-region round trip, and how to use them under pressure)](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%202%20-%20The%20System%20Design%20Method/module-05-back-of-envelope-estimation.md)
 
 ### Phase 3 — Distributed Systems Theory
 
