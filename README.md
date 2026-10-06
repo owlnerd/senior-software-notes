@@ -92,8 +92,8 @@ Module 3 covers this properly: time budgets per step, and what senior-level answ
 
 26. [Compute choices](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%206%20-%20Cloud%20%26%20Platform%20Architecture/module-26-compute-choices.md) — App Service vs. AKS vs. Azure Functions/Container Apps, and when each wins
 27. [Messaging & data platform](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%206%20-%20Cloud%20%26%20Platform%20Architecture/module-27-messaging-data-platform.md) — Service Bus, Event Grid/Event Hubs, Cosmos DB (partitioning & consistency levels)
-28. Observability]() — OpenTelemetry, distributed tracing, SLO/SLI/error budgets, structured logging
-29. Security architecture]() — OAuth2/OIDC, Microsoft Entra ID, Key Vault, threat modeling (STRIDE)
+28. [Observability](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%206%20-%20Cloud%20%26%20Platform%20Architecture/module-28-observability.md) — OpenTelemetry, distributed tracing, SLO/SLI/error budgets, structured logging
+29. [Security architecture](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%206%20-%20Cloud%20%26%20Platform%20Architecture/module-29-security-architecture.md) — OAuth2/OIDC, Microsoft Entra ID, Key Vault, threat modeling (STRIDE)
 
 ### Phase 7 — The Architect-Specific Track
 
