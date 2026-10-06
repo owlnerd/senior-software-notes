@@ -2435,7 +2435,7 @@ Narrate it in this order:
 
 - Service Bus **Premium** (private endpoints required, predictable latency, Geo-Replication) — benchmark: ~2 MU at peak with headroom; autoscale 2–4 MU on CPU.
 - Duplicate detection on `orders-events` with a **1-hour** window; outbox relay via the **change feed processor** (Concept 41) with `MessageId = outbox id`.
-- Event Hubs **Standard**, 32 partitions (partition key = session id), ~10 TUs at peak with auto-inflate to 20 and a nightly scale-down; three consumer groups (personalization, fraud, analytics); Capture to ADLS for the cold path — or Premium if the cost check in Concept 64b says so.
+- Event Hubs **Standard**, 32 partitions (partition key = session id), three consumer groups (personalization, fraud, analytics), Capture to ADLS for the cold path. TUs by Concept 25's formula: ingress 10 MB/s → 10, but egress across three groups is 30 MB/s ÷ 2 → **15 TUs at peak** — egress dominates — with auto-inflate to ~25 and a nightly scale-down. At ~15 TUs plus Capture, re-run Concept 64b: Premium may be in the same price range.
 
 **4. Failure handling and backpressure** (Concepts 10, 19, 54):
 
@@ -2470,13 +2470,13 @@ Narrate it in this order:
 
 **3. Stream — Event Hubs Premium** (Concepts 24, 25):
 
-- 40 MB/s rules out comfortable Standard (40-TU ceiling with no headroom) → **Premium**, roughly 5–8 PUs after a load test; partitions: 40 MB/s ÷ ~1–2 MB/s → **64** (Premium allows 100 per hub), partition key = vehicle ID (per-vehicle order).
+- 40 MB/s rules out comfortable Standard (40-TU ceiling with no headroom) → **Premium**. Ingress alone suggests ~5–8 PUs (~5–10 MB/s per PU), but three consumer groups mean **~120 MB/s of egress**, which at ~10–20 MB/s per PU needs 6–12 PUs — so plan **~8–12 PUs** and settle it with a load test (egress across consumer groups dominates again); partitions: 40 MB/s ÷ ~1–2 MB/s → **64** (Premium allows 100 per hub), partition key = vehicle ID (per-vehicle order).
 - Consumer groups: `latest-state`, `alerts`, `analytics`; **Capture** (included) to ADLS for history.
 
 **4. Latest state — Cosmos DB**, but not 40,000 writes/s:
 
-- Writing every message would be 40,000 × ~6 RU ≈ **240,000 RU/s** — expensive and pointless for a map refreshed every few seconds. Instead, the `latest-state` processor **coalesces per vehicle** and upserts (or patches) at most every 15–30 s, or immediately on a state change: ~200,000 ÷ 20 s ≈ **10,000 writes/s × ~6 RU ≈ 60,000 RU/s**, autoscale with dynamic scaling. Partition key `/vehicleId` (point reads by vehicle; map queries by region via a **GSI** on `/regionCell`).
-- Or, if the live map is served from a cache, Managed Redis for the latest-state hot set with Cosmos as the durable record.
+- Writing every message would be 40,000 × ~6 RU ≈ **240,000 RU/s** — expensive and pointless for a map refreshed every few seconds. Instead, the `latest-state` processor **coalesces per vehicle** and upserts (or patches) at most every 15–30 s, or immediately on a state change: ~200,000 ÷ 20 s ≈ **10,000 writes/s × ~6 RU ≈ 60,000 RU/s**, autoscale with dynamic scaling. Partition key `/vehicleId` (point reads by vehicle; no hot key at one write per vehicle every ~20 s). Storage is tiny (~200 MB), so the physical partition count is driven by RU — at least 6 for 60,000 RU/s — the rare case where throughput, not storage, sets the count.
+- **Map queries ("vehicles in this area"):** avoid a GSI on `/regionCell` here. Every coalesced write is a *replace*, and replaces on a source with GSIs cost ~50–100% more RU (Concept 38), turning 60,000 RU/s into ~90,000–120,000 RU/s plus the GSI's own writes. Serve the live map from **Managed Redis geospatial** (`GEOADD`/`GEOSEARCH`) fed by the same processor, with Cosmos as the durable latest-state record — or from a region-keyed change-feed projection updated less often (map tiles tolerate 30–60 s of staleness). Keep the GSI only if map queries are rare and the premium is accepted explicitly.
 
 **5. Alerts** — **Stream Analytics** (or a processor) on the `alerts` consumer group filtering fault codes and windowed conditions, writing alerts to a Service Bus queue for the notification and work-order services (commands with owners, DLQ, retries).
 
@@ -2531,7 +2531,22 @@ Diagnose in layers (Concepts 34–36, 47):
 1. **State the fact**: as of September 30, 2026 it's retired — no support or fixes; anything on `WindowsAzure.ServiceBus` over SBMP has stopped working (Concept 7). It's a security and support finding now.
 2. **Inventory** direct and transitive dependencies (old Functions Service Bus extension 4.x, old MassTransit/NServiceBus transports, internal libraries).
 3. **Migrate** to `Azure.Messaging.ServiceBus`: one `ServiceBusClient` singleton, cached senders, `ServiceBusProcessor` with explicit settlement; Functions to extension 5.x (and to the isolated worker before November 10 — Module 26).
-4. **Handle old message bodies**: messages already in queues may have DataContract-serialized bodies; deserialize explicitly during the overlap, and try both formats before dead-lettering.
+4. **Handle old message bodies**: messages already in queues (and DLQs) may have DataContract-serialized `BrokeredMessage` bodies; deserialize explicitly during the overlap, and try both formats before dead-lettering:
+
+```csharp
+static OrderPlaced ReadBody(ServiceBusReceivedMessage m)
+{
+    if (m.ContentType == "application/json")                   // new producers set ContentType explicitly
+        return m.Body.ToObjectFromJson<OrderPlaced>()!;
+
+    // Legacy BrokeredMessage(object) bodies: DataContractSerializer over a binary XML dictionary writer.
+    var serializer = new DataContractSerializer(typeof(OrderPlaced));
+    using var reader = XmlDictionaryReader.CreateBinaryReader(m.Body.ToStream(), XmlDictionaryReaderQuotas.Max);
+    return (OrderPlaced)serializer.ReadObject(reader)!;
+}
+```
+
+   Make new producers set `ContentType`; dead-letter only after both paths fail, with a reason that says so; use unbounded quotas only because the sender is your own legacy code; and remove the branch (dated, recorded in an ADR) once queues and DLQs have drained.
 5. **Switch to Entra identity and disable SAS** while you're touching every client (Concept 15).
 6. **Deploy consumers first** (able to read both formats), then producers; drain, verify, remove the compatibility path.
 
