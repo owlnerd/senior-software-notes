@@ -98,9 +98,9 @@ Module 3 covers this properly: time budgets per step, and what senior-level answ
 ### Phase 7 — The Architect-Specific Track
 
 30. [Writing and defending a design document](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%207%20-%20The%20Architect-Specific%20Track/module-30-writing-defending-design-document.md)
-31. ADRs and the C4 model — documenting decisions so they survive personnel changes
-32. Brownfield thinking — incremental migration, the strangler fig pattern
-33. Cost, build-vs-buy, and technical debt — the language executives respond to
+31. [ADRs and the C4 model](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%207%20-%20The%20Architect-Specific%20Track/module-31-adrs-c4-model.md) — documenting decisions so they survive personnel changes
+32. [Brownfield thinking](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%207%20-%20The%20Architect-Specific%20Track/module-32-brownfield-thinking.md) — incremental migration, the strangler fig pattern
+33. [Cost, build-vs-buy, and technical debt](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%207%20-%20The%20Architect-Specific%20Track/module-33-cost-build-vs-buy-technical-debt.md) — the language executives respond to
 
 ### Phase 8 — Behavioral & Leadership
 
