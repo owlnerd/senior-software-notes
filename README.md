@@ -97,7 +97,7 @@ Module 3 covers this properly: time budgets per step, and what senior-level answ
 
 ### Phase 7 — The Architect-Specific Track
 
-30. Writing and defending a design document
+30. [Writing and defending a design document](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%207%20-%20The%20Architect-Specific%20Track/module-30-writing-defending-design-document.md)
 31. ADRs and the C4 model — documenting decisions so they survive personnel changes
 32. Brownfield thinking — incremental migration, the strangler fig pattern
 33. Cost, build-vs-buy, and technical debt — the language executives respond to
