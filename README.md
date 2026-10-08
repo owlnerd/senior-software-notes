@@ -50,8 +50,8 @@ Module 3 covers this properly: time budgets per step, and what senior-level answ
 
 ### Phase 1 — Foundations & Calibration
 
-1. What top companies actually score (rubric literacy)
-2. Senior IC vs. Architect: calibrating your prep to your actual target
+1. [What top companies actually score (rubric literacy)](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%201%20%E2%80%94%20Foundations%20%26%20Calibration/module-01-rubric-literacy.md)
+2. [Senior IC vs. Architect: calibrating your prep to your actual target](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%201%20%E2%80%94%20Foundations%20%26%20Calibration/module-02-senior-ic-vs-architect.md)
 
 ### Phase 2 — The System Design Method
 
