@@ -109,11 +109,11 @@ Module 3 covers this properly: time budgets per step, and what senior-level answ
 
 ### Phase 9 — Coding Round, Right-Sized
 
-36. What senior-level coding rounds actually test, given your DS&A is already strong — code quality, edge cases, testing, API design over algorithmic trivia
+36. [What senior-level coding rounds actually test, given your DS&A is already strong](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%209%20-%20Coding%20Round%2C%20Right-Sized/module-36-senior-coding-rounds.md) — code quality, edge cases, testing, API design over algorithmic trivia
 
 ### Phase 10 — Applied Practice
 
-37. Worked system design problems with .NET-specific implementation notes (URL shortener, rate limiter, notification system, distributed cache, order/payment system)
+37. [Worked system design problems with .NET-specific implementation notes (URL shortener, rate limiter, notification system, distributed cache, order/payment system)](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%2010%20-%20Applied%20Practice/module-37-worked-system-design-problems.md)
 38. Mock interview structure & a self-scoring rubric
 39. Company/role research checklist
 
