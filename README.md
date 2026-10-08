@@ -114,8 +114,8 @@ Module 3 covers this properly: time budgets per step, and what senior-level answ
 ### Phase 10 — Applied Practice
 
 37. [Worked system design problems with .NET-specific implementation notes](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%2010%20-%20Applied%20Practice/module-37-worked-system-design-problems.md) — (URL shortener, rate limiter, notification system, distributed cache, order/payment system)
-38. Mock interview structure & a self-scoring rubric
-39. Company/role research checklist
+38. [Mock interview structure & a self-scoring rubric](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%2010%20-%20Applied%20Practice/module-38-mock-interview-structure-self-scoring-rubric.md)
+39. [Company/role research checklist](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%2010%20-%20Applied%20Practice/module-39-company-role-research-checklist.md)
 
 ---
 
