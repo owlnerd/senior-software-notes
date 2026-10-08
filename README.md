@@ -113,7 +113,7 @@ Module 3 covers this properly: time budgets per step, and what senior-level answ
 
 ### Phase 10 — Applied Practice
 
-37. [Worked system design problems with .NET-specific implementation notes (URL shortener, rate limiter, notification system, distributed cache, order/payment system)](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%2010%20-%20Applied%20Practice/module-37-worked-system-design-problems.md)
+37. [Worked system design problems with .NET-specific implementation notes](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%2010%20-%20Applied%20Practice/module-37-worked-system-design-problems.md) — (URL shortener, rate limiter, notification system, distributed cache, order/payment system)
 38. Mock interview structure & a self-scoring rubric
 39. Company/role research checklist
 
@@ -122,19 +122,6 @@ Module 3 covers this properly: time budgets per step, and what senior-level answ
 ## Suggested Pacing
 
 No fixed calendar — go at whatever pace your timeline allows. As a default, 2–3 modules per session keeps each one deep enough to be useful without turning into a lecture. Phases 3–5 are the heaviest; don't rush them. If you've got an actual interview date, tell me and we'll compress or reorder around it.
-
-## Progress Tracker
-
-- [ ] Phase 1 — Foundations & Calibration (Modules 1–2)
-- [ ] Phase 2 — System Design Method (Modules 3–5)
-- [ ] Phase 3 — Distributed Systems Theory (Modules 6–13)
-- [ ] Phase 4 — .NET & C# Technical Mastery (Modules 14–19)
-- [ ] Phase 5 — .NET Architecture Patterns (Modules 20–25)
-- [ ] Phase 6 — Cloud & Platform Architecture (Modules 26–29)
-- [ ] Phase 7 — Architect-Specific Track (Modules 30–33)
-- [ ] Phase 8 — Behavioral & Leadership (Modules 34–35)
-- [ ] Phase 9 — Coding Round (Module 36)
-- [ ] Phase 10 — Applied Practice (Modules 37–39)
 
 ## Further Reading (optional, alongside our sessions)
 
