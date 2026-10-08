@@ -104,8 +104,8 @@ Module 3 covers this properly: time budgets per step, and what senior-level answ
 
 ### Phase 8 — Behavioral & Leadership
 
-34. STAR, calibrated to seniority — senior answers describe what you delivered; staff/architect answers explain why it mattered and how it shaped the system
-35. Your story bank — mapping real experience to the 6–8 stories that cover most behavioral questions (conflict, failure, leading through ambiguity, technical disagreement, mentoring, influence without authority)
+34. [STAR, calibrated to seniority](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%208%20-%20Behavioral%20%26%20Leadership/module-34-star-calibrated-to-seniority.md) — senior answers describe what you delivered; staff/architect answers explain why it mattered and how it shaped the system
+35. [Your story bank](https://github.com/owlnerd/senior-software-notes/blob/main/Phase%208%20-%20Behavioral%20%26%20Leadership/module-34-star-calibrated-to-seniority.md) — mapping real experience to the 6–8 stories that cover most behavioral questions (conflict, failure, leading through ambiguity, technical disagreement, mentoring, influence without authority)
 
 ### Phase 9 — Coding Round, Right-Sized
 
